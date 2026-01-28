@@ -45,7 +45,10 @@ if(true){
 
 let nombre2 = "Juan";
 let edad = 10;
+
 if(edad > 7 && edad < 18){
     //console.log(nombre2,'Puede montarse a la montaña rusa')
+}else{
+    //console.log(nombre2,'No puede montarse a la montaña rusa')
 }
 

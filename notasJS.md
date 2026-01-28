@@ -86,15 +86,22 @@ Este operador se encarga de **negar** o invertir el valor booleano.
 
 ---
 
-## Control de Flujo
-El if es un controlador que evalua si la condicion es true o false.
-* **Ejemplo:**  
-if(true){
-    //console.log("Esta en true, asique pasa a mostrar el mensaje por pantalla")
-}
+### Control de Flujo
+El `if` es un controlador que evalúa si la condición es `true` o `false`.
 
-let nombre2 = "Juan";
-let edad = 10;
-if(edad > 7 && edad < 18){
-    //console.log(nombre2,'Puede montarse a la montaña rusa')
-}
+* **Ejemplo:**
+    ```javascript
+    if (true) {
+        // console.log("Está en true, así que pasa a mostrar el mensaje por pantalla")
+    }
+    ```
+
+* **Ejemplo práctico:**
+    ```javascript
+    let nombre2 = "Juan";
+    let edad = 10;
+
+    if (edad > 7 && edad < 18) {
+        // console.log(nombre2, 'Puede montarse a la montaña rusa')
+    }
+    ```
