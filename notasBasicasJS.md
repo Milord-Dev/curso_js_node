@@ -81,12 +81,11 @@ Busca el **primer valor falso**. Si queremos que regrese `true`, todos los valor
 Este operador se encarga de **negar** o invertir el valor booleano.
 * **Ejemplo:** `!true;` // Regresa `false`.
 
-> **Dato Extra:** Tambien se puedes hacer comparaciones con stings y cualquier string tanto numero u objeto regresa true menos el 0
-> Esto solo es valido con el operador or o ||.
+> **Dato Extra:** Tambien se puedes hacer comparaciones con stings y cualquier string tanto numero u objeto regresa true menos el 0 Esto solo es valido con el operador or o ||.
 
 ---
 
-### Control de Flujo
+## Control de Flujo - IF
 El `if` es un controlador que evalúa si la condición es `true` o `false`.
 
 * **Ejemplo:**
@@ -105,3 +104,70 @@ El `if` es un controlador que evalúa si la condición es `true` o `false`.
         // console.log(nombre2, 'Puede montarse a la montaña rusa')
     }
     ```
+
+---
+
+## Contro de Flujo - WHILE
+El `while` es un ciclo que permite repetir un bloque de código mientras una condición se mantenga como verdadera (`true`).
+
+* **Ejemplo:**
+    ```javascript
+    let contador = 0;
+
+    while (contador < 5) {
+        // console.log("El contador es:", contador);
+        contador++; // Es importante aumentar el valor para que el ciclo no sea infinito
+    }
+    ```
+> **Dato Extra:** Tambien puede evaluar una condicion en true y despues dentro del bloque cambiarla a false para que no se vuelva a repetir.
+
+---
+
+## Contro de Flujo - SWITCH
+El `Switch` nos permite hacer una instruccion u otra, cuando recibe alguno de los parametros o casos.
+
+* **Ejemplo:**
+    ```javascript
+    let valor = 2;
+
+    switch(valor){
+        case 1:{
+            console.log("Hola");
+            break;
+        }
+        case 2:{
+            console.log("Como estas?");
+            break;
+        }
+        case 3:{
+            console.log("Valor correcto")
+            break;
+        }
+        default:
+            console.log("No se selecciono ninguno de los valores")
+            break;
+    }
+    ```
+
+---
+
+### Control de Flujo - FOR
+El ciclo `for` se utiliza para repetir un bloque de código un número específico de veces. A diferencia del `while`, suele tener la inicialización, la condición y el incremento en una sola línea.
+
+* **Ejemplo:**
+    ```javascript
+    for (let i = 0; i < 5; i++) {
+        // console.log("El valor de i es:", i);
+    }
+    ```
+* **Nota:** Es muy útil cuando ya sabes de antemano cuántas veces necesitas que se ejecute el ciclo o para recorrer los elementos de un arreglo.
+
+* **Ejemplo para recorrer un arreglo:**
+    ```javascript
+    const arreglo = [1, 2, 3, 4, 5];
+
+    for (let i = 0; i < arreglo.length; i++) {
+        console.log(arreglo[i]);
+    }
+    ```
+* **Nota:** Usamos `arreglo.length` para que el ciclo sepa exactamente cuántas veces debe ejecutarse según el tamaño del arreglo.
