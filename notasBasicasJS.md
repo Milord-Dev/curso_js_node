@@ -171,3 +171,16 @@ El ciclo `for` se utiliza para repetir un bloque de código un número específi
     }
     ```
 * **Nota:** Usamos `arreglo.length` para que el ciclo sepa exactamente cuántas veces debe ejecutarse según el tamaño del arreglo.
+
+### Funciones - Function()
+Las `funciones` es una forma o mejor dicho un bloque de codigo el cual reutiliza una tarea especifica. Las funciones se deben escribir de la siguiente manera:
+
+* **Ejemplo:**
+    ```javascript
+    function iterr(){
+        const arreglo = [1, 2, 3, 4, 5];
+
+        for (let i = 0; i < arreglo.length; i++) {
+            console.log(arreglo[i]);
+        }
+    }
