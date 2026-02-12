@@ -184,3 +184,24 @@ Las `funciones` es una forma o mejor dicho un bloque de codigo el cual reutiliza
             console.log(arreglo[i]);
         }
     }
+    ```
+
+* **Nota:** Una funcion recibe argumentos lo que permite cambiar el contenido de manera dinamica el agumento recibira lo que uno ponde dentro de la instancia que creo.
+
+* **Ejemplo:**
+    ```javascript
+    //Aqui es donde se recibe el argumento de la instancia
+    function iterr(arg1){
+        for (let i = 0; i < arg1.length; i++) {
+            console.log(arg1[i]);
+        }
+    }
+
+    const numeros = [1,2,3,4,5]; 
+    const nombres = ['Ricardo', 'Pedro', 'Alberto', 'Juan'];
+
+    iterr(numeros); // lo que ira aqui a dentro se le conoce como parametro.
+    iterr(nombres);
+    ```
+
+* **Nota:** Esto se hace para que podamos usar esta funcion con cualquier arreglo y no solo encasillarlo a uno.

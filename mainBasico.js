@@ -94,5 +94,18 @@ for(i = 0; i <= 10; i++){
 //Ejemplo 2
 const arreglo = [1,2,3,4,5];
 for (let i = 0; i <= arreglo.length; i++){
-    console.log(arreglo[i]);
+    //console.log(arreglo[i]);
 }
+
+//Funciones
+function iterr(arg1){
+    for (let i = 0; i < arg1.length; i++){
+        console.log(arg1[i]);
+    }
+}
+
+const numeros = [1,2,3,4,5];
+const nombres = ['Ricardo', 'Pedro', 'Alberto', 'Juan'];
+
+iterr(numeros);
+iterr(nombres);
