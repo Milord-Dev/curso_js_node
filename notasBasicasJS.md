@@ -205,4 +205,3 @@ Las `funciones` es una forma o mejor dicho un bloque de codigo el cual reutiliza
     ```
 
 * **Nota:** Esto se hace para que podamos usar esta funcion con cualquier arreglo y no solo encasillarlo a uno.
-actualizacion de token.
