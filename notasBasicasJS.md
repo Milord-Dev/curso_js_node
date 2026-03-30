@@ -196,9 +196,8 @@ Las `funciones` es una forma o mejor dicho un bloque de codigo el cual reutiliza
             console.log(arg1[i]);
         }
     }
-
     const numeros = [1,2,3,4,5]; 
-    const nombres = ['Ricardo', 'Pedro', 'Alberto', 'Juan'];
+    const nombres = ['Ricardo', 'Pedro', 'Alberto', 'Juan']; //Estos son arreglos
 
     iterr(numeros); // lo que ira aqui a dentro se le conoce como parametro.
     iterr(nombres);

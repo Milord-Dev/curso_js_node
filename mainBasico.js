@@ -87,25 +87,36 @@ while(x){
 //             break;
 //     }
 
-//Control de flujo For
-for(i = 0; i <= 10; i++){
-    //console.log(i);
-}
-//Ejemplo 2
-const arreglo = [1,2,3,4,5];
-for (let i = 0; i <= arreglo.length; i++){
-    //console.log(arreglo[i]);
+// //Control de flujo For
+// for(i = 0; i <= 10; i++){
+//     //console.log(i);
+// }
+// //Ejemplo 2
+// const arreglo = [1,2,3,4,5];
+// for (let i = 0; i <= arreglo.length; i++){
+//     //console.log(arreglo[i]);
+// }
+
+// //Funciones
+// function iterr(arg1){
+//     for (let i = 0; i < arg1.length; i++){
+//         console.log(arg1[i]);
+//     }
+// }
+
+// const numeros = [1,2,3,4,5];
+// const nombres = ['Ricardo', 'Pedro', 'Alberto', 'Juan'];
+
+// iterr(numeros);
+// iterr(nombres);
+
+//Otras Funciones
+function suma(a,b){
+    return a+b;
 }
 
-//Funciones
-function iterr(arg1){
-    for (let i = 0; i < arg1.length; i++){
-        console.log(arg1[i]);
-    }
-}
+const argSuma = suma(1,2);
+const argSuma2 = suma(5,8);
+const sumatotal = suma(argSuma,argSuma2);
 
-const numeros = [1,2,3,4,5];
-const nombres = ['Ricardo', 'Pedro', 'Alberto', 'Juan'];
-
-iterr(numeros);
-iterr(nombres);
+console.log('El resultado es: ', sumatotal);
