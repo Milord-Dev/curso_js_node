@@ -201,7 +201,7 @@ Las `funciones` es una forma o mejor dicho un bloque de codigo el cual reutiliza
 
 * **Ejemplo:**
     ```javascript
-    //Aqui es donde se recibe el argumento de la instancia
+    // Aquí se define el parámetro
     function iterr(arg1){
         for (let i = 0; i < arg1.length; i++) {
             console.log(arg1[i]);
@@ -210,8 +210,10 @@ Las `funciones` es una forma o mejor dicho un bloque de codigo el cual reutiliza
     const numeros = [1,2,3,4,5]; 
     const nombres = ['Ricardo', 'Pedro', 'Alberto', 'Juan']; //Estos son arreglos
 
-    iterr(numeros); // lo que ira aqui a dentro se le conoce como parametro.
+    // Aquí se pasan argumentos
+    iterr(numeros);
     iterr(nombres);
     ```
 
 * **Nota:** Esto se hace para que podamos usar esta funcion con cualquier arreglo y no solo encasillarlo a uno.
+
