@@ -44,10 +44,10 @@ En JavaScript, las constantes no pueden cambiar su valor de asignación original
     let nombre = "Pedro";
 
     const objetoUsuario = {
-        edad: 18, // Esta es una propiedad y puede ser cambiada.
+        edad: 18, // Este es el valor de una propiedad y puede ser cambiado.
         nombreUsuario: nombre,
         estado: true,
-    }
+    } // lo que no se puede hacer es, reasignar el objeto en este caso porque es una constante.
     ```
 
 ---
@@ -68,12 +68,23 @@ Ambos ejemplos devolverán `true`, pero la diferencia radica en que el doble igu
 Existen tres tipos de operadores lógicos esenciales:
 
 ### 1. OR (`||`)
-Busca el **primer valor verdadero** para regresar `true`.
+- Evalua de Izq a Der.
+- Busca el **primer valor verdadero**.
+- Si encuentra un valor **verdadero** devuelve dicho valor y se detine
+- Si no encuentra un valor **verdadero** devuelve el ultimo valor
+- Si quisieramos un valor **false** todos los valores deberian ser false.
+- Se usa mas para comprobar.
+
 * **Ejemplo:** `true || false;` // Regresa `true` porque uno de los valores lo es.
 * **Ejemplo 2:** `true || false || false || false;` // Regresa `true`.
 
 ### 2. AND (`&&`)
-Busca el **primer valor falso**. Si queremos que regrese `true`, todos los valores deben ser verdaderos.
+- Evalua de Izq a Der.
+- Busca el **primer valor falso**.
+- Si encuentra un valor **false** devuelve dicho valor y se detiene.
+- Si no encuentra un valor **false** devuelve el ultimo valor
+- Si queremos que regrese `true`, todos los valores deben ser verdaderos.
+
 * **Ejemplo:** `true && false;` // Regresa `false` porque existe un valor falso.
 * **Ejemplo 2:** `true && true && true && true && false;` // Regresa `false`.
 
