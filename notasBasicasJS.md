@@ -217,3 +217,76 @@ Las `funciones` es una forma o mejor dicho un bloque de codigo el cual reutiliza
 
 * **Nota:** Esto se hace para que podamos usar esta funcion con cualquier arreglo y no solo encasillarlo a uno.
 
+---
+
+### Funciones - Return
+El `return` se encarga de devolver un valor desde la función hacia el lugar donde fue llamada. Además, detiene la ejecución de la función.
+
+* **Ejemplo:**
+    ```javascript
+    // La función recibe los parámetros a y b
+    function sum(a, b){
+        return a + b; // retorna el resultado de la suma
+    }
+
+    const resultadoSum = sum(1, 2);
+
+    console.log("El resultado es:", resultadoSum);
+    ```
+
+> Si una función no tiene `return`, devolverá `undefined` por defecto.
+
+---
+
+### Funciones sin `return`
+
+Una función en JavaScript puede ejecutarse aunque no tenga la palabra clave `return`. En estos casos, la función realiza acciones (como imprimir en consola), pero **devuelve `undefined` por defecto**.
+
+Este tipo de funciones se utilizan cuando solo se necesita ejecutar una tarea, pero no devolver un valor reutilizable.
+
+* **Ejemplo:**
+
+```javascript
+function iterr(arg1){
+    for (let i = 0; i < arg1.length; i++) {
+        console.log(arg1[i]); // imprime cada elemento
+    }
+}
+
+const numeros = [1,2,3,4,5]; 
+const nombres = ['Ricardo', 'Pedro', 'Alberto', 'Juan'];
+
+iterr(numeros);
+iterr(nombres);
+```
+
+En este caso, la función se ejecuta correctamente y muestra los valores en consola, pero internamente retorna:
+
+```javascript
+undefined
+```
+
+* **Ejemplo guardando el resultado:**
+
+```javascript
+const resultado = iterr(numeros);
+
+console.log(resultado); // undefined
+```
+
+---
+
+### Diferencia clave
+
+* Funciones **sin `return`** → ejecutan acciones (efectos secundarios)
+* Funciones **con `return`** → devuelven un valor que puede ser reutilizado
+
+---
+
+> 💡 Nota: Si no se especifica un `return`, JavaScript devuelve `undefined` automáticamente.
+
+---
+
+### Callbacks
+Los `Callbacks` son simplemente funciones que se pasan como argumentos dentro de otras funciones.
+
