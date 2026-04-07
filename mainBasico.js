@@ -111,12 +111,28 @@ while(x){
 // iterr(nombres);
 
 //Otras Funciones
-function suma(a,b){
+// function suma(a,b){
+//     return a+b;
+// }
+
+// const argSuma = suma(1,2);
+// const argSuma2 = suma(5,8);
+// const sumatotal = suma(argSuma,argSuma2);
+
+// console.log('El resultado es: ', sumatotal);
+
+// Callbacks
+function sum(a,b){
     return a+b;
+}                         // En este caso estas funciones serian los callbacks
+function multi(a,b){
+    return a*b;
 }
 
-const argSuma = suma(1,2);
-const argSuma2 = suma(5,8);
-const sumatotal = suma(argSuma,argSuma2);
+//funcion para recibir los callbacks 
+function calculadoraBasica(a,b, operacion){
+    console.log(operacion(a,b));
+}
 
-console.log('El resultado es: ', sumatotal);
+// Aqui llamamos a los callbacks
+calculadoraBasica(1,2,sum);
