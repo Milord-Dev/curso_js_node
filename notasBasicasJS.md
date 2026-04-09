@@ -288,23 +288,25 @@ console.log(resultado); // undefined
 ---
 
 ### Callbacks
-Los `Callbacks` son simplemente funciones que se pasan como argumentos dentro de otras funciones o tambien se puede ver como una funcion que recibe otras o varias funciones y las llama dentro de si misma.
+Los `Callbacks` son funciones que se pasan como argumentos a otras otras funciones con el objetivo de que estas puedan ejecutarlas posteriormente.
 
-* **Ejemplo:**
+Tambien se puede entender como una función que recive otra funión y la ejecuta de su propio bloque de codigo.
+
+### ¿Cómo funcionan?
+Cuando pasas una función como argumento, estas se guardan en una variable (parametro) dentro de la funcion receptora.
+
 ```javascript
-// Callbacks
-function sum(a,b){
-    return a+b;
-}                         // En este caso estas funciones serian los callbacks
-function multi(a,b){
-    return a*b;
+function ejecutar(callback){
+    callback()
 }
-
-//funcion para recibir los callbacks 
-function calculadoraBasica(a,b, operacion){
-    console.log(operacion(a,b));
-}
-
-// Aqui llamamos a los callbacks
-calculadoraBasica(1,2,sum);
 ```
+Aquí, `callback` es simplemente un parametro (variable) que almacenará una funcion.
+
+cuando se usa:
+```javascript
+callback()
+```
+
+no se esta llamando una funcion llamada `callback`, si no que se esta ejecutando la función que fue pasada como argumento.
+
+* **Ejemplo Basico**
