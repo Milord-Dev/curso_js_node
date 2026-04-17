@@ -136,3 +136,6 @@ function calculadoraBasica(a,b, operacion){
 
 // Aqui llamamos a los callbacks
 calculadoraBasica(1,2,sum);
+
+//Fat Arrow function
+const fatArrowFunction = (a,b) => a+b; //El return es implicito al se de una sola linea
