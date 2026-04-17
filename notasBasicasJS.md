@@ -290,25 +290,135 @@ console.log(resultado); // undefined
 ---
 
 ### Callbacks
-Los `Callbacks` son funciones que se pasan como argumentos a otras otras funciones con el objetivo de que estas puedan ejecutarlas posteriormente.
 
-Tambien se puede entender como una función que recive otra funión y la ejecuta de su propio bloque de codigo.
+Los `callbacks` son funciones que se pasan como argumentos a otras funciones, con el objetivo de que estas puedan ejecutarlas posteriormente.
+
+También se puede entender como una función que recibe otra función y la ejecuta dentro de su propio bloque de código.
+
+---
 
 ### ¿Cómo funcionan?
-Cuando pasas una función como argumento, estas se guardan en una variable (parametro) dentro de la funcion receptora.
+
+Cuando pasas una función como argumento, esta se guarda en una variable (parámetro) dentro de la función receptora.
 
 ```javascript
 function ejecutar(callback){
-    callback()
+    callback();
 }
 ```
-Aquí, `callback` es simplemente un parametro (variable) que almacenará una funcion.
 
-cuando se usa:
+Aquí, `callback` es simplemente un **parámetro (variable)** que almacenará una función.
+
+Cuando se usa:
+
 ```javascript
-callback()
+callback();
 ```
 
-no se esta llamando una funcion llamada `callback`, si no que se esta ejecutando la función que fue pasada como argumento.
+No se está llamando a una función llamada `callback`, sino que se está ejecutando **la función que fue pasada como argumento**.
 
-* **Ejemplo Basico**
+---
+
+### Ejemplo básico
+
+```javascript
+function miFuncion(){
+    console.log("Soy un callback");
+}
+
+function ejecutar(callback){
+    console.log("Antes");
+
+    callback(); // ejecuta la función recibida
+
+    console.log("Después");
+}
+
+ejecutar(miFuncion);
+```
+
+---
+
+### Paso a paso
+
+```javascript
+ejecutar(miFuncion);
+```
+
+Internamente ocurre esto:
+
+```javascript
+callback = miFuncion;
+callback(); // miFuncion();
+```
+
+---
+
+### Diferencia entre variable y ejecución
+
+* `callback` → referencia a una función
+* `callback()` → ejecución de esa función
+
+---
+
+### Comparación con otro ejemplo
+
+```javascript
+function hacerOper(a, b, operacion){
+    console.log(operacion(a, b));
+}
+
+function sum(a, b){
+    return a + b;
+}
+
+function multi(a, b){
+    return a * b;
+}
+
+hacerOper(2, 3, sum);
+hacerOper(2, 3, multi);
+```
+
+En este caso:
+
+* `operacion` cumple el mismo rol que `callback`
+* `sum` y `multi` son los callbacks
+* `operacion(a, b)` ejecuta la función recibida
+
+---
+
+### Idea clave
+
+El nombre del parámetro no importa:
+
+```javascript
+function ejecutar(fn){
+    fn();
+}
+```
+
+`callback`, `operacion`, `fn`… todos representan lo mismo:
+una variable que almacena una función.
+
+---
+
+### Resumen
+
+* Un callback es una función pasada como argumento
+* Se ejecuta dentro de otra función
+* El parámetro actúa como variable que contiene la función
+* Usar `()` ejecuta la función almacenada
+
+---
+
+### Nota
+
+> No debes usar paréntesis al pasar el callback:
+
+```javascript
+ejecutar(miFuncion); // ✅ correcto
+ejecutar(miFuncion()); // ❌ incorrecto
+```
+
+Esto evita que la función se ejecute antes de ser pasada.

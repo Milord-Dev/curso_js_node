@@ -124,7 +124,7 @@ while(x){
 // Callbacks
 function sum(a,b){
     return a+b;
-}                         // En este caso estas funciones serian los callbacks
+}                       // En este caso estas funciones serian los callbacks
 function multi(a,b){
     return a*b;
 }
