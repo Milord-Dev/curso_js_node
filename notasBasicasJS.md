@@ -425,3 +425,124 @@ Esto evita que la función se ejecute antes de ser pasada.
 
 ---
 
+### Arrow Functions (`=>`)
+
+Las *arrow functions* son una forma más corta y moderna de escribir funciones en JavaScript.
+
+Permiten definir funciones de manera más simple, especialmente cuando se usan como callbacks.
+
+---
+
+### Sintaxis básica
+
+```javascript
+const suma = (a, b) => {
+    return a + b;
+};
+```
+
+---
+
+### Forma corta (return implícito)
+
+Cuando la función tiene una sola expresión, no es necesario usar `return`:
+
+```javascript
+const suma = (a, b) => a + b;
+```
+
+---
+
+### Ejemplo 1: Callback con arrow function
+
+```javascript
+function ejecutar(callback){
+    console.log("Antes");
+
+    callback();
+
+    console.log("Después");
+}
+
+ejecutar(() => {
+    console.log("Soy un callback con arrow function");
+});
+```
+
+---
+
+#### Paso a paso
+
+1. Se pasa una función como argumento:
+
+```javascript
+() => {
+    console.log("Soy un callback con arrow function");
+}
+```
+
+2. Esta función se guarda en `callback`
+
+3. Cuando se ejecuta:
+
+```javascript
+callback();
+```
+
+4. Se ejecuta la función pasada como argumento
+
+---
+
+### Ejemplo 2: Operaciones dinámicas
+
+```javascript
+function hacerOper(a, b, operacion){
+    console.log(operacion(a, b));
+}
+
+hacerOper(2, 3, (a, b) => a + b);
+hacerOper(2, 3, (a, b) => a * b);
+```
+
+---
+
+#### Paso a paso
+
+1. Se pasa una arrow function como argumento:
+
+```javascript
+(a, b) => a + b
+```
+
+2. Se guarda en `operacion`
+
+3. Se ejecuta dentro de la función:
+
+```javascript
+operacion(a, b);
+```
+
+4. Devuelve el resultado correspondiente
+
+---
+
+### Ventajas
+
+* Sintaxis más corta
+* Ideal para callbacks
+* Más legible en funciones simples
+
+---
+
+### Nota
+
+> Las arrow functions no tienen su propio `this`, lo cual puede cambiar su comportamiento en ciertos contextos.
+
+---
+
+### Resumen
+
+* Son funciones más cortas
+* Pueden usarse como callbacks
+* Permiten `return` implícito
+* Se definen usando `=>`

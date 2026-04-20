@@ -140,14 +140,14 @@ function calculadoraBasica(a,b, operacion){
 //Fat Arrow function
 const fatArrowFunction = (a,b) => a+b; //El return es implicito al se de una sola linea
 const r = fatArrowFunction(1,3);
-console.log(r);
+// console.log(r);
 
 //Otro modode hacer las fat arrow function
 const fatDos = (a,b) => {
     return a+b;
 };
 const r2 = fatDos(5,6);
-console.log("El resultado es = ",r2);
+// console.log("El resultado es = ",r2);
 
 
 //Ejemplo de usando fat arrow function combinado con callbacks
@@ -158,11 +158,21 @@ function calculo(a,b,operacion2){
     console.log(operacion2(a,b))
 }
 
-calculo(3,5,suma);
+// calculo(3,5,suma);
 
 //Ejemplo 2 de Arrow Function con callbacks
 function hacerOp(a,b,op){
     console.log(op(a,b))
 };
 
-hacerOp(20,20, (a,b) => a+b);
+// hacerOp(20,20, (a,b) => a+b);
+
+//Ejemplo 3
+function ejecutar(callback){
+    console.log("Hola");
+    callback();
+    console.log("eres un humano");
+}
+ejecutar(()=>{
+    console.log("Ricardo");
+});
