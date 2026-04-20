@@ -422,3 +422,6 @@ ejecutar(miFuncion()); // ❌ incorrecto
 ```
 
 Esto evita que la función se ejecute antes de ser pasada.
+
+---
+

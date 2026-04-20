@@ -159,3 +159,10 @@ function calculo(a,b,operacion2){
 }
 
 calculo(3,5,suma);
+
+//Ejemplo 2 de Arrow Function con callbacks
+function hacerOp(a,b,op){
+    console.log(op(a,b))
+};
+
+hacerOp(20,20, (a,b) => a+b);
