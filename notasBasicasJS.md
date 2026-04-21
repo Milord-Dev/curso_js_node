@@ -552,4 +552,5 @@ operacion(a, b);
 ### Manejo del Dom
 ### DocumentById
 ### window.onload
-### inner.text
+### innerText
+### innerHTML
