@@ -546,3 +546,10 @@ operacion(a, b);
 * Pueden usarse como callbacks
 * Permiten `return` implícito
 * Se definen usando `=>`
+
+---
+
+### Manejo del Dom
+### DocumentById
+### window.onload
+### inner.text

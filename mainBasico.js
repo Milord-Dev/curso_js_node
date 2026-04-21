@@ -173,6 +173,6 @@ function ejecutar(callback){
     callback();
     console.log("eres un humano");
 }
-ejecutar(()=>{
-    console.log("Ricardo");
-});
+// ejecutar(()=>{
+//     console.log("Ricardo");
+// });
