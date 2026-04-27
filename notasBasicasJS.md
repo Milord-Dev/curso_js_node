@@ -554,3 +554,5 @@ operacion(a, b);
 ### window.onload
 ### innerText
 ### innerHTML
+### preventDefault
+### value

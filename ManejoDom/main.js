@@ -6,6 +6,8 @@
 //     // texto.innerHTML = '<li>Hola</li> <li>Mundo</li>' // con innerHTML agrega html al elemento
 // }
 
+const todosList = [];
+
 window.onload = () => {
     const form = document.getElementById('todo-form')
     //el on submit es una propiedad de js
@@ -14,6 +16,7 @@ window.onload = () => {
         const todo = document.getElementById('to-do')
         todoValor = todo.value;
         todo.value = '';
-        console.log(todoValor)
+        //Guardar el todo en el array
+        
     }
 }
